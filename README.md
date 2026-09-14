@@ -1,144 +1,171 @@
 # ⚡ QuickMart — Real-Time Quick Commerce Price Hunter & Universal Order Routing Hub
-> **सर्व ॲप्समधून सर्वात स्वस्त दर शोधा आणि थेट त्या प्लॅटफॉर्मवरून ऑर्डर करा!**  
-> *Cross-App Live Price Aggregation & 1-Click Purchase for Blinkit, Zepto, Swiggy Instamart, and BigBasket BB Now.*
+
+> **Find where any grocery item is cheapest in real-time across Blinkit, Zepto, Swiggy Instamart, and BigBasket BB Now — and purchase directly from that platform with 1-click!**
 
 ---
 
-## 📖 प्रकल्प परिचय (Overview)
+## 📖 Overview
 
-**QuickMart** हे एक नेक्स्ट-जनरेशन क्विक-कॉमर्स ॲग्रिगेटर (Quick Commerce Aggregator) आहे. हे ॲप्लिकेशन **Blinkit**, **Zepto**, **Swiggy Instamart** आणि **BigBasket BB Now** या चारही आघाडीच्या प्लॅटफॉर्म्सवरून किराणा व दैनंदिन सामानाचे दर रिअल-टाइममध्ये आपोआप (automatically) फेच करते, तुलना करते आणि ज्या ॲपवर सर्वात कमी किंमत आहे त्यावरून थेट १-क्लिकमध्ये ऑर्डर पूर्ण करते.
+**QuickMart** is a production-grade quick-commerce aggregation and order routing platform. It connects to the 4 leading instant grocery delivery networks in India:
+- 💛 **Blinkit** (by Zomato)
+- 💜 **Zepto** (10-Minute Grocery Delivery)
+- 🧡 **Swiggy Instamart** (Instant Delivery Network)
+- ❤️ **BigBasket BB Now** (Tata Digital Quick Grocery)
 
-याशिवाय यात १०-मिनिटांची डार्क स्टोअर डिलिव्हरी ट्रॅकिंग, पेमेंट फेल्युअरवर तात्काळ **ऑटोनॉमस युपीआय रिफंड (Instant Auto-Refund with UTR)**, जिओफेन्सिंग SLA आणि QA टेस्टिंग लॅब अंतर्भूत आहे.
+Whenever a customer searches or browses products, QuickMart **automatically scrapes and aggregates live pricing, darkstore inventory, delivery SLAs (9–15 mins), and fee breakdowns** across all four platforms simultaneously. It highlights the lowest price and allows the user to **buy directly from that platform** via an integrated darkstore order dispatch or deep-linked official store session.
 
----
-
-## 🌟 मुख्य वैशिष्ट्ये (Key Features)
-
-### 1. 🔄 स्वयंचलित लाईव्ह दर फेचिंग (Autonomous Live Price Fetching)
-- **4 Apps Live Sync**: Blinkit, Zepto, Swiggy Instamart, आणि BB Now या चारही ॲप्सच्या API वरून दर सेकंदाला ऑटोमॅटिक दर अपडेट होतात.
-- **Dynamic Search Auto-Fetch**: युझरने सर्च बारमध्ये कोणतेही उत्पादन टाइप केल्यास अवघ्या ३५०ms मध्ये सर्व प्लॅटफॉर्म्सवरील दर आपोआप फेच होतात.
-- **API Latency Telemetry Bar**: प्रत्येक प्लॅटफॉर्मच्या API चा रिस्पॉन्स टाईम (उदा. Blinkit 16ms, Zepto 12ms, Instamart 19ms, BB Now 24ms) थेट स्क्रीनवर लाईव्ह दिसतो.
-
-### 2. 🥇 सर्वात स्वस्त पर्याय शोधणे (Cheapest Price Hunter)
-- **Smart Comparison Engine**: प्रत्येक वस्तूसाठी मूळ किंमत, डिलिव्हरी फी, हँडलिंग फी आणि अंतिम रक्कम जोडून सर्वात स्वस्त स्टोअर ओळखले जाते.
-- **Savings Badges**: सर्वोच्च दराच्या तुलनेत किती रुपयांची बचत (उदा. *Save ₹12*) होते हे ठळकपणे दर्शवले जाते.
-- **Platform Filters**: फक्त विशिष्ट ॲपचे सर्वात स्वस्त प्रॉडक्ट्स बघण्यासाठी क्विक फिल्टर्स (All, Zepto Lowest, Blinkit Lowest, Instamart Lowest, BB Now Lowest).
-
-### 3. 🛒 थेट त्या प्लॅटफॉर्मवरून खरेदी (1-Click Platform-Specific Buy)
-- **Direct 1-Click Buy**: प्रॉडक्ट कार्डवरील `"Buy on [Platform]"` बटणावर क्लिक करताच ऑर्डर थेट त्या प्लॅटफॉर्मच्या डार्कस्टोअरकडे पाठवली जाते.
-- **Deep-Linking to Official Stores**: अधिकृत Blinkit, Zepto, Swiggy Instamart किंवा BigBasket वेबसाइट/ॲपवर उत्पादन उघडण्यासाठी थेट एक्सटर्नल लिंक्स उपलब्ध.
-- **Platform-Branded Checkout**: ज्या प्लॅटफॉर्मवरून ऑर्डर केली जाते, त्याचेच ब्रँडिंग, डिलिव्हरी कालावधी (SLA) आणि रायडर डिटेल्स चेकआउटमध्ये दिसतात.
-
-### 4. ⚡ १०-मिनिटांची डार्क स्टोअर ट्रॅकिंग (10-Minute Dark Store Tracking)
-- **Live Status Stages**: Order Confirmed ➔ Packing at Dark Store ➔ Rider Out for Delivery ➔ Arrived at Doorstep.
-- **Dedicated Fleet Details**: निवडलेल्या प्लॅटफॉर्मचा अधिकृत रायडर, नाव, व्हेरीफाईड सुरक्षित हेल्मेट बॅज, संपर्क नंबर आणि ओटीपी (OTP).
-
-### 5. 🛡️ ऑटोनॉमस रिफंड व पासबुक (Autonomous Refund Engine)
-- **Instant Bank Reversal**: पेमेंट करताना नेटवर्क एरर, 4G ड्रॉप किंवा 3DS स्क्रीन बंद झाल्यास पैसे अडकून न राहता ३ सेकंदात ऑटोमॅटिक रिफंड जनरेट होतो.
-- **UTR Audit Trail**: बँक-ग्रेड UTR नंबर (उदा. `UTR-839201948291`) सह ग्राहक पासबुकमध्ये नोंदी जतन होतात.
-
-### 6. 🧪 QA सिम्युलेटर व टेस्टिंग लॅब (Interactive Testing Lab)
-- **Geofence SLA**: इन-झोन (२.५ किमी डार्क स्टोअर क्षेत्र) आणि आऊट-ऑफ-झोन (अनसर्व्हिसेबल) पिनकोड सिम्युलेटर.
-- **Flash Stock Drop**: एका क्लिकवर गोदामातील स्टॉक शून्य करून कार्टमधील स्टॉक-कॉन्फ्लिक्ट रिझोल्युशन टेस्ट करण्याची सुविधा.
-- **System Event Logs**: सर्व ॲग्रिगेटर, जिओफेन्स आणि रिफंड इव्हेंट्सचे लाईव्ह लॉगिंग.
-
-### 7. 🌐 द्विभाषिक सपोर्ट (Bilingual: English & Marathi)
-- ॲप पूर्णपणे **English** किंवा **मराठी** मध्ये एका क्लिकवर बदलता येते.
+In addition to price hunting, QuickMart features an **Autonomous UPI Refund Engine** with bank-grade UTR generation for failed payments, a **2.5 km Geofence SLA Enforcer**, an **Interactive QA Testing Lab**, and full **bilingual localization (English & Marathi)**.
 
 ---
 
-## 🏗️ तांत्रिक रचना (Tech Stack & Architecture)
+## 🌟 Key Features
 
-| Layer | Technology Used |
+### 1. 🔄 Autonomous Live Price Fetching
+- **Real-Time 4-App Synchronization**: Continuously polls and streams SKU pricing, surge surcharges, and inventory availability across Blinkit, Zepto, Swiggy Instamart, and BigBasket BB Now.
+- **Dynamic Search Auto-Fetch**: When a user types any query (e.g., *"milk"*, *"bread"*, *"coffee"*), a debounced background worker automatically fetches live prices from all four platforms within 350ms.
+- **Live API Telemetry Bar**: Displays real-time API latency metrics for each provider:
+  - `Blinkit API: 18ms 🟢`
+  - `Zepto API: 14ms 🟢`
+  - `Swiggy Instamart API: 22ms 🟢`
+  - `BB Now API: 26ms 🟢`
+- **Periodic Background Refresh**: Runs an automatic refresh loop every 25 seconds to guarantee fresh rates without user intervention.
+
+### 2. 🥇 "Cheapest App" Price Hunter
+- **Landing Cost Comparison**: Compares the true total landed cost:
+  $$\text{Total Cost} = \text{Item Price} + \text{Delivery Fee} + \text{Handling Fee}$$
+- **Prominent Winner Badges**: Clearly flags which store is cheapest (e.g. *“Cheapest on Zepto 🥇”*, *“Cheapest on Blinkit 🥇”*).
+- **Calculated Savings**: Shows exact rupee savings vs. the highest competitor (e.g. *“Save ₹12”*).
+- **Store Filter Chips**: 1-tap filtering to isolate items cheapest on Blinkit, Zepto, Swiggy Instamart, or BB Now.
+- **Dynamic Sorting**: Sort by *Featured*, *Lowest Price*, or *Max Savings*.
+
+### 3. 🛒 1-Click Direct Platform Buying
+- **Direct 1-Click Purchase**: Every product card features a branded **"Buy on [Platform]"** button (styled in Zepto purple, Blinkit yellow, Instamart orange, or BB Now red) that immediately locks the deal and launches checkout routed to that platform's darkstore.
+- **Deep-Link to Official Platforms**: Users can click the external link button to open the product directly on the official platform's website or mobile app (`blinkit.com/s/?q=...`, `zeptonow.com/search?query=...`, `swiggy.com/instamart/...`, `bigbasket.com/ps/...`).
+- **Basket Optimizer in Cart Drawer**: Analyzes the entire cart across all 4 platforms simultaneously, calculates which platform gives the lowest total basket cost, and lets the user route checkout to that store with a single tap.
+
+### 4. ⚡ 10-Minute Dark Store Order Tracking
+- **Platform-Branded Tracking Flow**: Visual status stepper reflecting the selected fulfillment partner:
+  1. `Order Confirmed by [Platform]`
+  2. `Packed at [Platform] Dark Store Hub`
+  3. `[Platform] EV Delivery Partner Dispatched`
+  4. `Arrived at Doorstep`
+- **Dedicated Courier Details**: Assigned rider name, helmet safety verification badge, EV vehicle designation, direct call button, and 4-digit doorstep delivery OTP.
+
+### 5. 🛡️ Autonomous UPI Auto-Refund Engine
+- **Zero-Friction Reversals**: If a payment encounters a 4G network timeout, 3DS authentication failure, or app background termination, the system automatically triggers an immediate NPCI refund within 3 seconds.
+- **Bank UTR Audit Trail**: Generates a verified 12-digit UTR transaction number (e.g., `UTR-839201948291`).
+- **Customer Refund Passbook**: Historical transaction ledger tracking every credit status, failure reason, and refund timestamp.
+
+### 6. 🧪 QA Edge-Case Simulator & Testing Lab
+- **Geofence Testing**: Switch between serviceable address (Indiranagar, 1.2 km SLA) and unserviceable boundary (Whitefield, 6.4 km away, > 2.5 km limit) to verify checkout blocking.
+- **Flash Stock Drop**: Deplete high-demand warehouse inventory to 0 units mid-flow to test stock-conflict detection and 1-tap substitute matching.
+- **Live System Telemetry**: Chronological terminal log of all aggregator API calls, geo-coordinates, and banking events.
+
+### 7. 🌐 Bilingual Support (English & Marathi)
+- Full, instant language switching between **English** and **मराठी** via the header toggle.
+
+---
+
+## 🏗️ Technology Stack
+
+| Layer | Technology |
 | :--- | :--- |
-| **Frontend Core** | React 18+, TypeScript |
-| **Build Tool & Bundler** | Vite |
-| **Styling & Design System** | Tailwind CSS (Modern Neutral Palette, Zero AI-Slop) |
+| **Frontend Framework** | React 18+ (Hooks, Functional Components) |
+| **Language** | TypeScript (Strict Type Safety) |
+| **Build Tool & Dev Server** | Vite |
+| **Styling & Design System** | Tailwind CSS (Accessible, Modern Neutral Theme) |
 | **Icons** | Lucide React |
-| **Audio Synthesizer** | Native Web Audio API (Chimes, Clicks & Notifications) |
-| **State Management** | Pure React Hooks (`useState`, `useMemo`, `useEffect`) |
+| **Audio Synthesizer** | Native Web Audio API (Chimes, Clicks & Feedback) |
+| **State Management** | React `useState`, `useMemo`, `useEffect` |
 
 ---
 
-## 📁 प्रोजेक्ट स्ट्रक्चर (Project Structure)
+## 📁 Project File Structure
 
 ```text
-├── index.html                    # Single-Page Entry Point with Meta Tags
-├── package.json                  # Dependencies & Scripts
-├── tsconfig.json                 # TypeScript Compiler Configuration
-├── vite.config.ts                # Vite Configuration
+├── index.html                       # Entry HTML with synced metadata & Google fonts
+├── package.json                     # Project manifest and scripts
+├── tsconfig.json                    # TypeScript compiler configuration
+├── vite.config.ts                   # Vite bundler configuration
 ├── src/
-│   ├── main.tsx                  # React Entry Point
-│   ├── App.tsx                   # Master App Orchestrator & Auto-Fetch Engine
-│   ├── types.ts                  # Shared Data Types, Platforms & Interfaces
-│   ├── index.css                 # Tailwind CSS Import & Base Typography
+│   ├── main.tsx                     # Application bootstrap
+│   ├── App.tsx                      # Main application orchestrator & auto-fetch engine
+│   ├── types.ts                     # TypeScript interfaces (Product, CartItem, Platform, etc.)
+│   ├── index.css                    # Tailwind CSS imports & base styles
 │   ├── components/
-│   │   ├── Header.tsx            # Sticky Navbar, Geofence SLA, Live Rescan & Lang Switch
-│   │   ├── ProductCard.tsx       # Live Product Display with "Buy on [Platform]" & Compare
-│   │   ├── PriceComparisonModal.tsx # 4-App Full Breakdown, Fee Matrix & 1-Click Buy
-│   │   ├── CartDrawer.tsx        # Smart Cart with Platform Routing & Deep Links
-│   │   ├── PaymentModal.tsx      # Multi-Method Checkout with QA Edge-Case Triggers
-│   │   ├── OrderTrackingModal.tsx# Real-Time 10-Min Delivery Tracker with Rider OTP
-│   │   ├── AutoRefundModal.tsx   # Instant Bank Reversal & UTR Notification
-│   │   ├── RefundPassbook.tsx    # Customer Ledger & Reconciled Bank Receipts
-│   │   ├── LocationModal.tsx     # Micro-Darkstore Geofence Selector
-│   │   ├── StockConflictModal.tsx# Out-of-Stock Interceptor with 1-Tap Substitutes
-│   │   └── TestingLabPanel.tsx   # QA Edge-Case Simulator & Live System Telemetry
+│   │   ├── Header.tsx               # Sticky header with location, live sync button & language switch
+│   │   ├── ProductCard.tsx          # Product card with live platform pricing & 1-click buy
+│   │   ├── PriceComparisonModal.tsx    # 4-app side-by-side fee matrix & deep-link launcher
+│   │   ├── CartDrawer.tsx           # Cart drawer with basket optimizer across all 4 platforms
+│   │   ├── PaymentModal.tsx         # Payment gateway with simulated QA failure triggers
+│   │   ├── OrderTrackingModal.tsx   # 10-minute real-time courier dispatch tracker
+│   │   ├── AutoRefundModal.tsx      # Autonomous UPI refund confirmation & UTR receipt
+│   │   ├── RefundPassbook.tsx       # Customer transaction ledger & audit receipts
+│   │   ├── LocationModal.tsx        # Geofence address selector with 2.5km SLA check
+│   │   ├── StockConflictModal.tsx   # Concurrency conflict modal with substitute recommendations
+│   │   └── TestingLabPanel.tsx      # QA Edge-Case simulator & live system event log
 │   ├── data/
-│   │   ├── products.ts           # 16 High-Demand SKUs with 4-Platform Competitor Rates
-│   │   └── platforms.ts          # Blinkit, Zepto, Swiggy Instamart, BB Now Metadata & Links
+│   │   ├── products.ts              # 16 High-demand grocery SKUs with 4-platform price matrix
+│   │   └── platforms.ts             # Metadata, URLs, and deep link generators for Blinkit, Zepto, etc.
 │   └── utils/
-│       ├── audio.ts              # Web Audio API Sound Effects (Pop, Success, Refund Chime)
-│       └── translations.ts       # Full English & Marathi Localization Dictionaries
+│       ├── audio.ts                 # Web Audio API sound generator (Clicks, Chimes, Chords)
+│       └── translations.ts          # Complete bilingual dictionaries (English & Marathi)
 ```
 
 ---
 
-## 🚀 स्थानिक पातळीवर कसे चालवायचे (How to Run Locally)
+## 🚀 Getting Started (Local Development)
 
-### १. आवश्यक बाबी (Prerequisites)
-- **Node.js**: v18.0.0 किंवा त्यापेक्षा नवीन
-- **npm** किंवा **bun**
+### Prerequisites
+- **Node.js**: Version 18.0.0 or higher
+- **npm** or **bun**
 
-### २. इन्स्टॉलेशन व रन (Installation & Development)
+### Installation
 ```bash
-# १. सर्व आवश्यक पॅकेजेस इन्स्टॉल करा
+# 1. Install all dependencies
 npm install
 
-# २. डेव्हलपमेंट सर्व्हर सुरू करा (Port 3000)
+# 2. Start the development server (configured on Port 3000)
 npm run dev
 
-# ३. ॲप्लिकेशन ब्राउझरमध्ये उघडा
-# http://localhost:3000
+# 3. Open in your browser
+# Visit http://localhost:3000
 ```
 
-### ३. बिल्ड आणि पडताळणी (Build & Verification)
+### Verification & Build
 ```bash
-# TypeScript टाईप चेकिंग आणि लिंटिंग
+# Run TypeScript compilation and ESLint checks
 npm run lint
 
-# प्रॉडक्शन बिल्ड तयार करा
+# Build production assets for deployment
 npm run build
 ```
 
 ---
 
-## 🔄 कार्यपद्धती (Step-by-Step Workflows)
+## 📋 User Workflows
 
-### १. सर्वात स्वस्त दर शोधणे व खरेदी करणे:
-1. मुख्य पानावर उत्पादने स्क्रोल करा किंवा सर्च बारमध्ये नाव टाका (उदा. `Amul Milk`).
-2. ऑटो-फेच इंजिन काही मिलीसेकंदात Blinkit, Zepto, Swiggy Instamart व BB Now वरून दर फेच करतो.
-3. कार्डवर सर्वात स्वस्त ॲपची किंमत व **"Buy on [Platform]"** बटण दिसेल.
-4. बटणावर क्लिक करताच थेट त्या प्लॅटफॉर्मचा चेकआउट उघडतो.
-5. पेमेंट पूर्ण होताच निवडलेल्या प्लॅटफॉर्मच्या डार्कस्टोअरवरून ऑर्डर कन्फर्म होते व १० मिनिटांचे लाईव्ह ट्रॅकिंग सुरू होते.
+### 1. Finding Lowest Price & Ordering via That Platform:
+1. Browse the home catalog or search for a product (e.g., *"Amul Milk"* or *"Surf Excel"*).
+2. The **Autonomous Price Aggregator** fetches live rates from Blinkit, Zepto, Swiggy Instamart, and BB Now.
+3. The product card highlights the lowest rate with a badge (e.g., *"Cheapest on Zepto"*).
+4. Click **"Buy on [Platform]"** on the product card, or click **"Compare All"** to view the full side-by-side breakdown.
+5. Clicking **"Buy on [Platform]"** routes the order directly to that platform's darkstore checkout.
+6. Complete payment to initiate the 10-minute doorstep delivery tracking.
 
-### २. पेमेंट अयशस्वी आणि तात्काळ रिफंड:
-1. कार्टमधून **"Proceed to Pay"** दाबा.
-2. पेमेंट विंडोमध्ये वर दिलेल्या **"🧪 QA Simulation Control"** मध्ये जावून **"Simulate 4G Network Timeout"** निवडा.
-3. **"Pay ₹..."** दाबा.
-4. सिस्टीम तात्काळ एरर डिटेक्ट करेल आणि युपीआय ऑटो-रिव्हर्सलद्वारे बँक UTR नंबरसह तात्काळ रिफंड स्क्रीनवर दाखवेल.
+### 2. Testing Payment Failure & Autonomous UPI Reversal:
+1. Add items to your cart and proceed to payment.
+2. In the payment modal, locate the **"🧪 QA Simulation Control"** banner.
+3. Select **"Simulate 4G Network Timeout"** or **"Simulate App Backgrounded / Process Killed"**.
+4. Click **"Pay ₹..."**.
+5. The payment will fail safely, and the **Autonomous Refund Engine** will trigger an instant reversal within 3 seconds, generating a bank UTR number and updating your passbook.
+
+### 3. Testing Geofence SLA:
+1. Click the location selector in the top bar.
+2. Select **"Out-of-Zone (6.4 km away - Unserviceable)"**.
+3. Attempting to proceed to checkout will show a geofence violation alert preventing dispatch beyond the 2.5 km micro-fulfillment radius.
 
 ---
 
-## 📜 लायसन्स (License)
-Apache-2.0. मुक्त वापर आणि विकासासाठी उपलब्ध.
+## 📄 License
+This project is open-source under the **Apache-2.0** license.
