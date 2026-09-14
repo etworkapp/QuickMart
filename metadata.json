@@ -1,0 +1,6 @@
+{
+  "name": "QuickMart - Quick Commerce Price Hunter & Order Hub",
+  "description": "Smart aggregator and price comparison engine that fetches real-time prices across Blinkit, Zepto, Swiggy Instamart, and BB Now, finds where any product is cheapest, and enables instant direct ordering.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
